@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+<head>
+    <title>Complex Marker Icons</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <style>
+        #container{
+            height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #map{
+            height: 80vh;
+            width: 80vw;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+<body>
+<div id = "container">
+    <div id="map"></div>
+</div>
+
+
+<!--
+ The `defer` attribute causes the callback to execute after the full HTML
+ document has been parsed. For non-blocking uses, avoiding race conditions,
+ and consistent behavior across browsers, consider loading using Promises
+ with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+-->
+
+<script src="mapping.js"></script>
+
+
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZotgJFJYPA0dOCkk0apoAx1vI9aRSrGw&callback=initMap"
+        defer
+></script>
+</body>
+</html>
